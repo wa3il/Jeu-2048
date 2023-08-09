@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <title>2048</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <?php 
+ 	 /* ici commence le code PHP 
+ 	 qui va être éxécuté par le serveur */
+ 	 $TITRE = "2048"; 
+ 	 // TITRE est une variable qui contient "2048"
+ 	?>
+ 	<title>
+ 	 <?php echo $TITRE; ?>
+ 	</title>
 </head>
 <body> 
     <div class="main-page">
@@ -12,34 +22,53 @@
         <h1>Jeu du 2048</h1>
 
         <form name="jeu-2048" method="get" action="action.php">
-            <button  class="button-74" type="submit" name="start-game" value="start" >start</button>
+            <button  class="button-74" type="submit" name="start" value="start" >start</button>
             <button class="button-74" type="reset" name="reset">reset</button>
-        </form>
+        
 
-        <div class="score">
-            <span>score : 0</span>
-        </div> 
+            <div class="score">
+                <span>score : 0</span>
+            </div> 
 
-        <div class="main-game">            
+            <div class="main-game">            
 
 
-            <table>
-                <tr>
-                    <td>0</td><td>0</td><td>0</td><td>0</td>
-                </tr>
-                <tr>
-                    <td>0</td><td>0</td><td>0</td><td>0</td>
-                </tr>
-                <tr>
-                    <td>0</td><td>0</td><td>0</td><td>0</td>
-                </tr>
-                <tr>
-                    <td>0</td><td>0</td><td>0</td><td>0</td>
-                </tr>
-            </table> 
+                <table>
+                    <tr>
+                        <td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td><td>0</td><td>0</td><td>0</td>
+                    </tr>
+                </table> 
 
+                
+            </div>
+
+            <div class="controle">
+                <button type="submit" name="action-joueur" value="gauche" >
+                    <img src="./image/arrow_back_FILL0_wght400_GRAD0_opsz48.png">
+                </button>
+                <button type="submit" name="action-joueur" value="haut" >
+                    <img src="./image/arrow_upward_FILL0_wght400_GRAD0_opsz48.png">
+                </button>
+                <button type="submit" name="action-joueur" value="droite" >
+                    <img src="./image/arrow_forward_FILL0_wght400_GRAD0_opsz48.png">
+                </button>
+                <button type="submit" name="action-joueur" value="bas" >
+                    <img src="./image/arrow_downward_FILL0_wght400_GRAD0_opsz48.png">
+                </button>
+            </div>
             
-        </div>
+
+
+        </form>
         
         <div class="regle-du-jeu">
             <p>Le gameplay du jeu repose sur l'utilisation des touches fléchées du clavier (ou de la fonction tactile sur tablettes et smartphones) pour déplacer les tuiles vers la gauche, la droite, le haut ou le bas. Lors d'un mouvement, l'ensemble des tuiles du plateau sont déplacés dans la même direction jusqu'à rencontrer les bords du plateau ou une autre tuile sur leur chemin. Si deux tuiles, ayant le même nombre, entrent en collision durant le mouvement, elles fusionnent en une nouvelle tuile de valeur double (par ex. : deux tuiles de valeur « 2 » donnent une tuile de valeur « 4 »). À chaque mouvement, une tuile portant un 2 ou un 4 apparaît dans une case vide de manière aléatoire.

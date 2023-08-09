@@ -61,7 +61,7 @@ td{
   display: inline-block;
   font-weight: 600;
   font-size: 18px;
-  padding: 0px 18px;
+  padding: 0px 15px;
   margin: 0px 10px ;
   line-height: 50px;
   text-align: center;
@@ -86,3 +86,4 @@ td{
     padding: 0 25px;
   }
 }
+
