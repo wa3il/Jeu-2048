@@ -12,6 +12,7 @@ body{
 
 .main-page h1{
     margin: 1.5em 2em;
+    
 }
 
 
@@ -28,7 +29,7 @@ body{
 }
 
 .main-game {
-    margin-top: 3em;
+    margin: 3em;
     display: flex;
     justify-content: center;
 
